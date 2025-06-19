@@ -22,3 +22,13 @@ mv ./quizer-main/env ./quizer-main/.env
 
 5.open brow
 ip:80 or ip:3001/3002
+
+
+
+docker exec-it deploy-ready-clean-backend1-1 bash
+
+node db/seed/index.js
+
+docker exec-it deploy-ready-clean-mongo-1 mongosh
+use Testdb
+db.questions.find().pretty()
