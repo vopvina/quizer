@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  haproxy:
+    image: haproxy:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    depends_on:
+      - backend1
+      - backend2
+
+  backend1:
+    build: ./backend1
+    ports:
+      - "3001:3000"
+    depends_on:
+      - mongo
+
+  backend2:
+    build: ./backend2
+    ports:
+      - "3002:3000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
