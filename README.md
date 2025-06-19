@@ -6,7 +6,7 @@
 2.clone repo
      git clone https://github.com/vopvina/quizer.git
      
-   cd deploy-ready-clean
+   cd ./quizer/
 
 
    
