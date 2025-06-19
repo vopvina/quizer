@@ -9,7 +9,7 @@ mv ./quizer-main/env ./quizer-main/.env
 
 
 3.clone repo
-     git clone https://github.com/ваш-юзернейм/ваш-репозиторий.git
+     git clone https://github.com/vopvina/quizer.git
    cd deploy-ready-clean
 
 4. build project
