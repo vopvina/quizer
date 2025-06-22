@@ -897,8 +897,13 @@ h6 {
   display: inline-block;
   background-color: #7883ff;
   color: #dcdcdc;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 0.4rem;
+  white-space: pre-line;
+  line-height: 1.4;
+  font-size: 1.6rem;
+  max-width: 90%;
+  text-align: center;
 }
 
 .animation-running {
@@ -1070,6 +1075,17 @@ body {
 }
 .footer small {
   font-size: 1.2rem;
+}
+
+.result-item {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.result-item h3 {
+  color: #7883ff;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

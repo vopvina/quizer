@@ -61,22 +61,38 @@ const QuizController = {
     
     clearInterval(quizDurationInterval);
     const currentScore = ((corrects / questions.length) * 10).toFixed(2);
+    const timeTaken = quizDuration; // Capture time before resetting
 
     let user;
     try {
-      user = await User.findById(req.session.user_id);
-      const score = new Score({ score: currentScore, seconds: quizDuration });
-      user.scores.push(score);
-      await score.save();
-      await user.save();
+      if (req.session.user_id) {
+        user = await User.findById(req.session.user_id);
+        if (user) {
+          const score = new Score({ score: currentScore, seconds: quizDuration });
+          user.scores.push(score);
+          await score.save();
+          await user.save();
+        }
+      }
     } catch (err) {
-      req.flash('error', err);
-      return res.redirect(302, '/quiz');
+      console.log("Error saving user score (non-critical):", err.message);
+      // Don't redirect on score save error, just continue
     }
     
     quizDuration = 0;
 
-    res.send({ success: true, answers, message: "Confirmed" });
+    const responseData = { 
+      success: true, 
+      answers, 
+      message: "Confirmed",
+      score: currentScore,
+      time: timeTaken,
+      totalQuestions: questions.length,
+      correctAnswers: corrects
+    };
+    
+    console.log("Sending quiz result data:", responseData);
+    res.send(responseData);
   },
 };
 

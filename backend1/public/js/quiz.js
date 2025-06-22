@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
       .then((res) => res.json())
       .then((data) => {
         styleCorrectAnswers(data.answers);
-        showTempPopup(data.message);
+        showQuizResultPopup(data);
       })
       .catch((err) => console.log(err));
   };
@@ -50,10 +50,10 @@ window.addEventListener("DOMContentLoaded", (e) => {
     node.forEach((el) => (el.innerText = (value + "").padStart(2, "0")));
   };
 
-  // set default duration for each question
-  const defaultDuration = 10;
-  let second = (defaultDuration * questions.length) % 60;
-  let minute = Math.floor((defaultDuration * questions.length) / 60);
+  // set fixed duration for the entire quiz (10 minutes = 600 seconds)
+  const totalQuizDuration = 600; // 10 minutes in seconds
+  let second = totalQuizDuration % 60;
+  let minute = Math.floor(totalQuizDuration / 60);
 
   updateElByPadding(secondSpans, second);
   updateElByPadding(minuteSpans, minute);

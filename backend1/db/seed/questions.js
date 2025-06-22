@@ -3,84 +3,183 @@ const { v4: uuidv4 } = require("uuid");
 module.exports = [
     {
         id: uuidv4(),
-        question: 'Which tool is commonly used for container orchestration?',
+        question: 'Что такое TCP/IP?',
         answers: [
-            'Docker',
-            'Kubernetes',
-            'Jenkins',
-            'Terraform'
-        ],
-        correct: 1
-    },
-    {
-        id: uuidv4(),
-        question: 'What does CI/CD stand for?',
-        answers: [
-            'Continuous Integration/Continuous Deployment',
-            'Code Integration/Code Delivery',
-            'Continuous Improvement/Continuous Development',
-            'Code Implementation/Code Debugging'
-        ],
-        correct: 0
-    },
-    {
-        id: uuidv4(),
-        question: 'Which of the following is an Infrastructure as Code (IaC) tool?',
-        answers: [
-            'Ansible',
-            'Nagios',
-            'Prometheus',
-            'Grafana'
-        ],
-        correct: 0
-    },
-    {
-        id: uuidv4(),
-        question: 'Which command is used to check the status of a systemd service?',
-        answers: [
-            'systemctl status',
-            'service check',
-            'systemd status',
-            'statusctl service'
-        ],
-        correct: 0
-    },
-    {
-        id: uuidv4(),
-        question: 'What is the main purpose of Docker?',
-        answers: [
-            'Monitoring applications',
-            'Automating deployments',
-            'Containerizing applications',
-            'Managing source code'
+            'Протокол сжатия файлов',
+            'Язык баз данных',
+            'Набор сетевых протоколов',
+            'Беспроводной сигнал'
         ],
         correct: 2
     },
     {
         id: uuidv4(),
-        question: 'Which tool is primarily used for continuous integration?',
+        question: 'Что такое MAC-адрес и для чего он используется?',
         answers: [
-            'Jenkins',
-            'Kubernetes',
-            'Docker',
-            'Vagrant'
+            'Тип IP-адреса',
+            'Уникальный идентификатор сетевого интерфейса',
+            'Формат аудиофайла',
+            'Пароль для роутера'
+        ],
+        correct: 1
+    },
+    {
+        id: uuidv4(),
+        question: 'Когда используется MAC-адрес ff:ff:ff:ff:ff:ff?',
+        answers: [
+            'Для личных сообщений',
+            'Для уникаст-коммуникаций',
+            'Для широковещательной передачи',
+            'Для шифрованного трафика'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'Что такое частный IP-адрес?',
+        answers: [
+            'IP, используемый в интернете',
+            'IP, назначенный провайдером роутеру',
+            'IP, используемый в локальной сети',
+            'Скрытый IP, используемый VPN'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'Что такое публичный IP-адрес?',
+        answers: [
+            'Используется только государственными организациями',
+            'IP для публичного Wi-Fi',
+            'Глобально маршрутизируемый IP-адрес',
+            'Заблокированный диапазон IP'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'За что отвечает канальный уровень в модели OSI?',
+        answers: [
+            'Маршрутизация пакетов',
+            'Предоставление шифрования',
+            'MAC-адресация и доставка кадров',
+            'Поддержка TCP-сессий'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'Что делает роутер?',
+        answers: [
+            'Повторяет электрические сигналы',
+            'Соединяет устройства в локальной сети',
+            'Маршрутизирует трафик между сетями',
+            'Шифрует сетевые данные'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'Что такое NAT (Преобразование сетевых адресов)?',
+        answers: [
+            'VPN-протокол',
+            'Преобразует публичные IP в частные',
+            'Преобразует частные IP в публичные',
+            'Стандарт беспроводной безопасности'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'Что такое прокси-сервер?',
+        answers: [
+            'Прямо назначает IP-адреса',
+            'Шифрует Wi-Fi трафик',
+            'Посредник между клиентом и сервером',
+            'Управляет DHCP-арендами'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'Для чего используется трехстороннее рукопожатие в TCP?',
+        answers: [
+            'Для закрытия соединения',
+            'Для маршрутизации пакетов',
+            'Для установления надежного TCP-соединения',
+            'Для сканирования портов'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'Для чего используется CSMA/CD?',
+        answers: [
+            'Обнаружение коллизий в Ethernet-сетях',
+            'Шифрование трафика',
+            'Сжатие данных',
+            'Обновления маршрутизации'
         ],
         correct: 0
     },
     {
         id: uuidv4(),
-        question: 'Which file is used to define a Docker image?',
+        question: 'Сколько доменов коллизий при подключении 3 компьютеров к коммутатору?',
         answers: [
-            'Dockerfile',
-            'docker-compose.yml',
-            'Makefile',
-            'build.yaml'
+            '1',
+            '2',
+            '3',
+            '0'
         ],
-        correct: 0
+        correct: 2
     },
     {
         id: uuidv4(),
-        question: 'What is the default port for SSH?',
+        question: 'Что такое DHCP?',
+        answers: [
+            'Протокол обмена файлами',
+            'Протокол назначения IP-адресов',
+            'DNS-кеширующий протокол',
+            'Настройка брандмауэра'
+        ],
+        correct: 1
+    },
+    {
+        id: uuidv4(),
+        question: 'Для чего используется ARP?',
+        answers: [
+            'Шифрование MAC-адресов',
+            'Поиск IP по MAC',
+            'Поиск MAC по IP',
+            'Маршрутизация между сетями'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'Что делает TTL (время жизни пакета)?',
+        answers: [
+            'Увеличивает скорость пакетов',
+            'Предотвращает зацикливание, ограничивая срок жизни пакета',
+            'Шифрует заголовки TCP',
+            'Приоритизирует видеотрафик'
+        ],
+        correct: 1
+    },
+    {
+        id: uuidv4(),
+        question: 'Что такое шлюз по умолчанию?',
+        answers: [
+            'Основной DHCP-сервер',
+            'Адрес для выхода из локальной сети',
+            'Зарезервированный публичный IP',
+            'Разрешатель DNS'
+        ],
+        correct: 1
+    },
+    {
+        id: uuidv4(),
+        question: 'Какой порт по умолчанию используется для SSH?',
         answers: [
             '21',
             '22',
@@ -91,13 +190,35 @@ module.exports = [
     },
     {
         id: uuidv4(),
-        question: 'Which tool is used for monitoring and alerting in DevOps?',
+        question: 'Для чего используется VLAN?',
         answers: [
-            'Prometheus',
-            'Terraform',
-            'Ansible',
-            'Docker'
+            'Шифрование локальных данных',
+            'Создание виртуальных подсетей в локальной сети',
+            'Назначение статических IP',
+            'Маршрутизация в интернете'
         ],
-        correct: 0
+        correct: 1
+    },
+    {
+        id: uuidv4(),
+        question: 'Что произойдёт, если пакет превышает MTU?',
+        answers: [
+            'Он всегда отбрасывается',
+            'Он дополняется нулями',
+            'Он фрагментируется',
+            'Он шифруется'
+        ],
+        correct: 2
+    },
+    {
+        id: uuidv4(),
+        question: 'В чём разница между TCP и UDP?',
+        answers: [
+            'TCP — беспроводной, UDP — проводной',
+            'TCP быстрее, но менее надёжен',
+            'TCP с установлением соединения, UDP — без него',
+            'TCP используется для видео, UDP — для почты'
+        ],
+        correct: 2
     }
-]
+];
